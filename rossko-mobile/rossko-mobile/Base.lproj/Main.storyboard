@@ -17,12 +17,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSQ-Ux-QeL">
+                                <rect key="frame" x="47" y="104" width="281" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Авторизация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWu-YN-85B">
+                                <rect key="frame" x="135" y="58" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCh-3f-ofN">
+                                <rect key="frame" x="47" y="152" width="281" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNK-Po-wJu">
+                                <rect key="frame" x="143" y="219" width="88" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0i-Pd-Zav"/>
+                                    <segue destination="N5c-6f-vry" kind="show" id="99V-wf-7Rt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jWu-YN-85B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0zR-81-NZG"/>
+                            <constraint firstItem="rNK-Po-wJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="1Wl-bv-2Sr"/>
+                            <constraint firstItem="GCh-3f-ofN" firstAttribute="centerX" secondItem="jWu-YN-85B" secondAttribute="centerX" id="Ewz-Sl-AW6"/>
+                            <constraint firstItem="JSQ-Ux-QeL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Grd-G8-ctA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSQ-Ux-QeL" secondAttribute="trailing" constant="45" id="YJ3-HY-w1T"/>
+                            <constraint firstItem="GCh-3f-ofN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Yjw-fT-1uv"/>
+                            <constraint firstItem="GCh-3f-ofN" firstAttribute="trailing" secondItem="JSQ-Ux-QeL" secondAttribute="trailing" id="Z8L-OH-Ngq"/>
+                            <constraint firstItem="JSQ-Ux-QeL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="o1g-Zi-Cdu"/>
+                            <constraint firstItem="GCh-3f-ofN" firstAttribute="top" secondItem="JSQ-Ux-QeL" secondAttribute="bottom" constant="18" id="scI-47-zit"/>
+                            <constraint firstItem="rNK-Po-wJu" firstAttribute="top" secondItem="GCh-3f-ofN" secondAttribute="bottom" constant="23" id="yWu-uX-GiO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Kd2-Oc-a9D"/>
+                    <connections>
+                        <outlet property="loginField" destination="JSQ-Ux-QeL" id="vAo-xi-4z5"/>
+                        <outlet property="passwordField" destination="JSQ-Ux-QeL" id="zKb-2L-yQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="31.934032983508249"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="5Eq-Sh-0M7">
+            <objects>
+                <viewController id="N5c-6f-vry" customClass="HomeViewController" customModule="rossko_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fkg-0r-msc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-Zv-JMc">
+                                <rect key="frame" x="166" y="107" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0AN-ty-mjR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fz-vD-iqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
